@@ -5,3 +5,5 @@ RUN apk add --update \
 		bash \
 	&& rm -rf /var/cache/apk/*
 RUN pip install docker-compose
+
+ENV DOCKER_CLIENT_TIMEOUT 600
