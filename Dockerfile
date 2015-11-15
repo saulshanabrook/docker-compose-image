@@ -1,4 +1,4 @@
-FROM docker:1.8-git
+FROM docker:1.9-git
 
 RUN apk add --update \
 		py-pip \
