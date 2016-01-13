@@ -20,5 +20,4 @@ ADD docker-entrypoint.sh /usr/local/bin/docker-entrypoint2.sh
 # different Gitlab CI builds of the same project.
 ADD docker-compose.sh /usr/local/bin/docker-compose
 
-
-ENV DOCKER_CLIENT_TIMEOUT 600
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint2.sh"]
