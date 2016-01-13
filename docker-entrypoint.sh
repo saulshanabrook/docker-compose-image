@@ -4,10 +4,10 @@ set -o errexit
 set -o nounset
 set -o xtrace
 
-echo "dind$RANDOM" > /usr/docker-compose-project-name
+export COMPOSE_PROJECT_NAME="dind$RANDOM"
 
 function clean_up {
-  docker rm -fv $(docker ps -a --format "{{.Names}}" | grep $(cat /usr/docker-compose-project-name)) || true
+  docker rm -fv $(docker ps -a --format "{{.Names}}" | grep $COMPOSE_PROJECT_NAME) || true
 }
 
 trap clean_up EXIT
