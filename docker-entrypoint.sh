@@ -14,4 +14,4 @@ trap clean_up EXIT
 
 export DOCKER_HOST='tcp://docker:2375'
 
-exec "$@"
+"$@"
