@@ -5,6 +5,7 @@ RUN apk add --update \
 		bash \
 		jq \
 		ruby \
+    perl \
 	&& rm -rf /var/cache/apk/*
 RUN pip install docker-compose
 RUN gem install --no-doc dpl
