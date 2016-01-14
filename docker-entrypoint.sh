@@ -7,6 +7,7 @@ set -o xtrace
 export COMPOSE_PROJECT_NAME="dind$(cat /proc/sys/kernel/random/uuid  | sed 's/-//g')"
 
 function clean_up {
+  sleep 1hr
   docker rm -fv $(docker ps -a --format "{{.Names}}" | grep $COMPOSE_PROJECT_NAME) || true
 }
 
