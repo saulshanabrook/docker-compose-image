@@ -10,6 +10,4 @@ RUN apk add --update \
 RUN pip install docker-compose
 RUN gem install --no-doc dpl
 
-ENV DOCKER_HOST tcp://docker:2375
-
 ADD docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
