@@ -5,6 +5,9 @@ set -o nounset
 set -o xtrace
 set -o verbose
 
+docker version
+docker-compose version
+
 export COMPOSE_PROJECT_NAME="dind$(cat /proc/sys/kernel/random/uuid  | sed 's/-//g')"
 
 function clean_up {
