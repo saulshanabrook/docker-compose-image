@@ -3,6 +3,7 @@ set -e
 set -o errexit
 set -o nounset
 set -o xtrace
+set -o verbose
 
 export COMPOSE_PROJECT_NAME="dind$(cat /proc/sys/kernel/random/uuid  | sed 's/-//g')"
 
@@ -11,7 +12,5 @@ function clean_up {
 }
 
 trap clean_up EXIT
-
-export DOCKER_HOST='tcp://docker:2375'
 
 "$@"
