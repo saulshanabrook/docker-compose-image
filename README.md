@@ -4,5 +4,5 @@ and adds enough for Gitlab CI builds (primarily Docker Compose).
 
 ```bash
 docker run --privileged --name some-docker -d docker:1.9-dind
-docker run --rm --link some-docker:docker quay.io/saulshanabrook/docker-compose:2.0.4 docker-compose version
+docker run --rm --link some-docker:docker quay.io/saulshanabrook/docker-compose docker-compose version
 ```
