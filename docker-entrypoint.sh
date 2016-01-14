@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-set -e
+#   set -e
 set -o errexit
-set -o nounset
-set -o xtrace
+# set -o nounset
+# set -o xtrace
 
 echo "dind$RANDOM" > /usr/docker-compose-project-name
 
